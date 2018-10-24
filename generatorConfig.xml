@@ -10,10 +10,12 @@
 		</commentGenerator>
 		
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+		<!-- <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
 			connectionURL="jdbc:mysql://localhost:3306/mybatis_test"
-			userId="root" password="00"></jdbcConnection>
-			
+			userId="root" password="00"></jdbcConnection> -->
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver" 
+			connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
+			userId="scott" password="00"></jdbcConnection>
 		<!--默认false，把JDBC DECIMAL和 NUMERIC类型解析为Integer,
                        为 true时把JDBC DECIMAL和NUMERIC类型解析为java.math.BigDecimal-->  
 		<javaTypeResolver>
@@ -41,7 +43,7 @@
 		</javaClientGenerator>
 		
 		<!-- 指定数据库表 -->
-		<table tableName="user"></table>
+		<table tableName="NXB_TASK_CREATE_RULE"></table>
 		
 		<!-- 指定java类型 -->
 		<!-- <table schema="true" tableName="product">
